@@ -216,11 +216,10 @@ public abstract class TCPMemcachedNodeImpl extends SpyObject implements
             if (shouldOptimize) {
               optimize();
             }
-
-            o=getNextWritableOp();
           }
           toWrite += bytesToCopy;
         }
+        o=getNextWritableOp();
       }
       getWbuf().flip();
       assert toWrite <= getWbuf().capacity() : "toWrite exceeded capacity: "
@@ -252,8 +251,8 @@ public abstract class TCPMemcachedNodeImpl extends SpyObject implements
           }
           return o;
         }
-        o = getCurrentWriteOp();
       }
+      o = getCurrentWriteOp();
     }
     return o;
   }
