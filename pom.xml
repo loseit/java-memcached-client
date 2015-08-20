@@ -14,7 +14,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.spy</groupId>
     <artifactId>spymemcached</artifactId>
-    <version>2.999.999-SNAPSHOT</version> <!-- not used -->
+    <version>2.11.4-SNAPSHOT</version> <!-- not used -->
+    <packaging>pom</packaging>
 
     <name>Spymemcached</name>
     <description>A client library for memcached.</description>
@@ -85,5 +86,14 @@
         </dependency>
     </dependencies>
 
-
+    <distributionManagement>
+        <repository>
+            <id>loseit-release</id>
+            <url>https://dev-maven.loseit.com/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>loseit-snapshot</id>
+            <url>https://dev-maven.loseit.com/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
